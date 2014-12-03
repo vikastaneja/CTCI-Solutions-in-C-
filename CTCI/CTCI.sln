@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTCI", "CTCI\CTCI.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTCI-Tests", "CTCI-Tests\CTCI-Tests.csproj", "{A7BFA44A-0A31-47E7-9DCA-608C306F1FAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardQuestions", "StandardQuestions\StandardQuestions.csproj", "{DBA97113-36A4-4B98-92E2-B392A6904A41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardQuestionsUTs", "StandardQuestionsUTs\StandardQuestionsUTs.csproj", "{202291A9-6833-4A0F-B902-455F6D6D5F7A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DBA97113-36A4-4B98-92E2-B392A6904A41} = {DBA97113-36A4-4B98-92E2-B392A6904A41}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +28,14 @@ Global
 		{A7BFA44A-0A31-47E7-9DCA-608C306F1FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7BFA44A-0A31-47E7-9DCA-608C306F1FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7BFA44A-0A31-47E7-9DCA-608C306F1FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA97113-36A4-4B98-92E2-B392A6904A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA97113-36A4-4B98-92E2-B392A6904A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA97113-36A4-4B98-92E2-B392A6904A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA97113-36A4-4B98-92E2-B392A6904A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{202291A9-6833-4A0F-B902-455F6D6D5F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{202291A9-6833-4A0F-B902-455F6D6D5F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{202291A9-6833-4A0F-B902-455F6D6D5F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{202291A9-6833-4A0F-B902-455F6D6D5F7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
