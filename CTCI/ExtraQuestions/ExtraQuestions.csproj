@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DBA97113-36A4-4B98-92E2-B392A6904A41}</ProjectGuid>
+    <ProjectGuid>{C88C6576-12A6-4D24-85F9-512187A23ECD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StandardQuestions</RootNamespace>
-    <AssemblyName>StandardQuestions</AssemblyName>
+    <RootNamespace>ExtraQuestions</RootNamespace>
+    <AssemblyName>ExtraQuestions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,10 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NumberOfIslands.cs" />
-    <Compile Include="Permutations.cs" />
-    <Compile Include="ValidParenthesisQuestions.cs" />
+    <Compile Include="BSTNthHighest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj">
+      <Project>{1dd98475-3c9b-4f80-a414-64958cb02ed9}</Project>
+      <Name>DataStructures</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

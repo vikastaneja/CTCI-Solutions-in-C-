@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DBA97113-36A4-4B98-92E2-B392A6904A41}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{C707B206-F15A-4C85-BBDB-76E5059D0A3F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StandardQuestions</RootNamespace>
-    <AssemblyName>StandardQuestions</AssemblyName>
+    <RootNamespace>MainDriver</RootNamespace>
+    <AssemblyName>MainDriver</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,10 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NumberOfIslands.cs" />
-    <Compile Include="Permutations.cs" />
-    <Compile Include="ValidParenthesisQuestions.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj">
+      <Project>{1dd98475-3c9b-4f80-a414-64958cb02ed9}</Project>
+      <Name>DataStructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExtraQuestions\ExtraQuestions.csproj">
+      <Project>{c88c6576-12a6-4d24-85f9-512187a23ecd}</Project>
+      <Name>ExtraQuestions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StandardQuestions\StandardQuestions.csproj">
+      <Project>{dba97113-36a4-4b98-92e2-b392a6904a41}</Project>
+      <Name>StandardQuestions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
