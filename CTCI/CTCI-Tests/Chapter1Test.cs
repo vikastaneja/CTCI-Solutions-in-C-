@@ -47,5 +47,47 @@ namespace CTCI.Tests
         {
             Assert.IsFalse(this.chapter1.Q1_AllUniqueWithDictionary("string.Empties"), "Input string with non-unique is returning true");
         }
+
+        [TestMethod()]
+        public void Q3_StringsAreNull()
+        {
+            Assert.IsTrue(this.chapter1.Q3_OneStringPermutationOfOther(null, null), "Input strings as null is returning false");
+        }
+
+        [TestMethod()]
+        public void Q3_StringssAreEmpty()
+        {
+            Assert.IsTrue(this.chapter1.Q3_OneStringPermutationOfOther(string.Empty, string.Empty), "Input string as empty is returning false");
+        }
+
+        [TestMethod()]
+        public void Q3_OneStringIsNullOtherEmpty()
+        {
+            Assert.IsFalse(this.chapter1.Q3_OneStringPermutationOfOther(string.Empty, null), "Input strings as null and empty is returning true");
+        }
+
+        [TestMethod()]
+        public void Q3_StringAreAnagrams()
+        {
+            Assert.IsTrue(this.chapter1.Q3_OneStringPermutationOfOther("abcdddddcbb", "bccdddddbba"), "Input string as anagrams is returning false");
+        }
+
+        [TestMethod()]
+        public void Q3_StringAreNotAnagrams()
+        {
+            Assert.IsFalse(this.chapter1.Q3_OneStringPermutationOfOther("abcdddddcbb", "bccdddddbbb"), "Input string as non anagrams is returning true");
+        }
+
+        [TestMethod()]
+        public void Q3_StringOfUnequalLengths()
+        {
+            Assert.IsFalse(this.chapter1.Q3_OneStringPermutationOfOther("abcdddddcbb", "bccdddddbb"), "Input string as anagrams is returning true");
+        }
+
+        [TestMethod()]
+        public void Q3_StringWithNullAndNonNull()
+        {
+            Assert.IsFalse(this.chapter1.Q3_OneStringPermutationOfOther(null, "bccdddddbb"), "Input string one as null is returning true");
+        }
     }
 }
