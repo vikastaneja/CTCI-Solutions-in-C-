@@ -22,6 +22,8 @@ namespace MainDriver
             bst.Add(12); 
             bst.Add(20);
             int value = BSTNthHighest.GetNthHighestNumber(5, bst.Root);
+
+            BstLevelOrderTraversal.Traverse(bst.Root);
         }
     }
 }
