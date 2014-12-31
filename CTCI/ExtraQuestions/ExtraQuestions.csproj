@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayQuestions.cs" />
     <Compile Include="BstLevelOrderTraversal.cs" />
     <Compile Include="BSTNthHighest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
