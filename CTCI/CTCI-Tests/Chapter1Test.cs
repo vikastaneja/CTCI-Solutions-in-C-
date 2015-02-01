@@ -89,5 +89,31 @@ namespace CTCI.Tests
         {
             Assert.IsFalse(this.chapter1.Q3_OneStringPermutationOfOther(null, "bccdddddbb"), "Input string one as null is returning true");
         }
+
+        [TestMethod()]
+        public void Q4_ValidStringWithSpaces()
+        {
+            Assert.AreEqual(this.chapter1.Q4_GetExpandedString("This is a valid string"), "This%20is%20a%20valid%20string", "Output string does not have valid character set");
+        }
+
+        [TestMethod()]
+        public void Q4_ValidStringWithoutSpaces()
+        {
+            Assert.AreEqual(this.chapter1.Q4_GetExpandedString("Thisstring"), "Thisstring", "Output string does not have valid character set");
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Q4_NullString()
+        {
+            this.chapter1.Q4_GetExpandedString(null);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Q4_EmptyString()
+        {
+            this.chapter1.Q4_GetExpandedString(string.Empty);
+        }
     }
 }

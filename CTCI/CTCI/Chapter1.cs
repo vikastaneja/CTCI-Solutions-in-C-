@@ -84,5 +84,32 @@ namespace CTCI
 
             return true;
         }
+
+        public string Q4_GetExpandedString(string str)
+        {
+            if (string.IsNullOrEmpty(str))
+            {
+                throw new ArgumentNullException("str");
+            }
+
+            // First count the number of spaces in the string.
+            uint count = 0;
+            foreach(char c in str)
+            {
+                if (c == ' ')
+                    count ++;
+            }
+
+            StringBuilder builder = new StringBuilder();
+            foreach(char c in str)
+            {
+                if (c == ' ')
+                    builder.Append("%20");
+                else
+                    builder.Append(c);
+            }
+
+            return builder.ToString();
+        }
     }
 }
