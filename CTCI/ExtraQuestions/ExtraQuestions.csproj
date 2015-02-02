@@ -42,6 +42,7 @@
     <Compile Include="ArrayQuestions.cs" />
     <Compile Include="BstLevelOrderTraversal.cs" />
     <Compile Include="BSTNthHighest.cs" />
+    <Compile Include="MiscProblems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

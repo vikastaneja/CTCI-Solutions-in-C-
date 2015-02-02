@@ -34,6 +34,14 @@ namespace MainDriver
             Console.WriteLine("Index of 8: " + ArrayQuestions.FindElement(a, 8));
 
             Console.WriteLine("Maximum subarray sum: " + ArrayQuestions.LargestSumSlidingWindow(a, 4));
+
+            List<Tuple<int, int>> list = new List<Tuple<int, int>>();
+            list.Add(new Tuple<int, int>(1, 4));
+            list.Add(new Tuple<int, int>(2, 5));
+            list.Add(new Tuple<int, int>(7, 10));
+            list.Add(new Tuple<int, int>(8, 9));
+            list.Add(new Tuple<int, int>(11, 14));
+            list = MiscProblems.MergeSortedPairLists(list);
         }
     }
 }
