@@ -37,5 +37,60 @@ namespace ExtraQuestions
 
             return -1;
         }
+
+        /// <summary>
+        /// Problem is to find the maximum sum subarray.
+        /// The solution is first to find the sum in the first iteration and then slide the window.
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="size"></param>
+        /// <returns></returns>
+        public static int LargestSumSlidingWindow(int[] arr, int size)
+        {
+	        if (arr == null || arr.Length == 0)
+	        {
+		        throw new ArgumentNullException("arr");
+	        }
+	
+	        if (arr.Length < size)
+	        {
+		        throw new ArgumentException();
+	        }
+	
+	        if (arr.Length == 1)
+	        {
+		        return arr[0];
+	        }
+	
+	        int sum = 0;
+	        int psum = 0;
+	        bool prevSum = false;
+	
+	        for (int i = 0; i + size <= arr.Length; i++)
+	        {
+		        int tsum = 0;
+	
+		        if (!prevSum)
+		        {
+			        // Calculate the sum here
+			        for (int j = i, temp = size; j < arr.Length && temp > 0; j++, temp--)
+			        {
+				        tsum += arr[j];
+			        }
+                    prevSum = true;
+		        }
+		        else
+		        {
+			        tsum = psum - arr[i - 1] + arr[i + size - 1] ;
+		        }
+		
+		        psum = tsum;
+		
+		        if (tsum > sum)
+			        sum = tsum;
+	        }
+	
+	        return sum;
+        }
     }
 }

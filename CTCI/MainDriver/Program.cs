@@ -32,6 +32,8 @@ namespace MainDriver
             Console.WriteLine("Index of 4: " + ArrayQuestions.FindElement(a, 4));
             Console.WriteLine("Index of 5: " + ArrayQuestions.FindElement(a, 5));
             Console.WriteLine("Index of 8: " + ArrayQuestions.FindElement(a, 8));
+
+            Console.WriteLine("Maximum subarray sum: " + ArrayQuestions.LargestSumSlidingWindow(a, 4));
         }
     }
 }
