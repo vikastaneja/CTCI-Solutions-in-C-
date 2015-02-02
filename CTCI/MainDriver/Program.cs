@@ -42,6 +42,9 @@ namespace MainDriver
             list.Add(new Tuple<int, int>(8, 9));
             list.Add(new Tuple<int, int>(11, 14));
             list = MiscProblems.MergeSortedPairLists(list);
+            string actual = "abbcc";
+            string reg = "a*cc";
+            Console.WriteLine("String and regex matching: " + StringProblems.MatchRegex(actual, reg));
         }
     }
 }
